@@ -1,0 +1,460 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="pagina_completa_estilos.css" title="style" />
+    <title>Manual Java</title>
+    <LINK REL=StyleSheet HREF="manual.css" TYPE="text/css" MEDIA=screen>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+
+<body>
+
+     <div class="navbar">
+       <h1>Manual Java</h1>
+        <a href="#enlace5">Constructores</a>
+        <a href="#enlace4">Metodos</a>
+        <a href="#enlace3">Tipos Sentencias Java</a>
+        <a href="#enlace2">Strings</a>
+        <a href="#enlace1">Conceptos Basicos</a>
+      
+</div>
+
+
+    <div id="principal">
+
+        <div class="articulo">
+            <h1 id="enlace1">Conceptos Basicos</h1>
+            <h2>Variables</h2>
+
+
+
+            <p>Las variables Java son un espacio de memoria en el que guardamos un determinado valor (o dato). Para
+                definir una variable seguiremos la estructura:<br><br>
+
+            <pre> [privacidad] tipo_variable identificador;</pre><br><br>
+            Java es un lenguaje de tipado estático. Por lo cual todas las variables tendrán un tipo de dato (ya sea
+            un tipo de dato primitivo o una clase) y un nombre de identificador.<br>
+
+
+            El tipo de dato se asignará a la hora de definir la variable. Además, en el caso de que las variables
+            sean propiedades de objetos tendrán una privacidad.</p>
+            <p>Las variables son utilizadas como propiedades dentro de los objetos.</p>
+            <pre>class Triangulo {
+                    private long base;
+                    private long altura;
+                }</pre>
+            <h2>Tipos de variables en Java</h2>
+
+            <table>
+                <tr>
+                    <th>Tipo de variable</th>
+                    <th>Bytes</th>
+                    <th>Rango de valores</th>
+                </tr>
+                <tr>
+                    <td>boolean</td>
+                    <td>1</td>
+                    <td>true, false</td>
+                </tr>
+                <tr>
+                    <td>byte</td>
+                    <td>1</td>
+                    <td>-128 a 127</td>
+                </tr>
+                <tr>
+                    <td>short</td>
+                    <td>2</td>
+                    <td>-32,768 a 32,767</td>
+                </tr>
+                <tr>
+                    <td>int</td>
+                    <td>4</td>
+                    <td>-2,147,483,648 a 2,147,483,647</td>
+                </tr>
+                <tr>
+                    <td>long</td>
+                    <td>8</td>
+                    <td>-9 × 10^18 a 9 × 10^18</td>
+                </tr>
+                <tr>
+                    <td>double</td>
+                    <td>8</td>
+                    <td>-1.79 × 10^308 a 1.79 × 10^308</td>
+                </tr>
+                <tr>
+                    <td>float</td>
+                    <td>4</td>
+                    <td>-3.4 × 10^38 a 3.4 × 10^38</td>
+                </tr>
+                <tr>
+                    <td>char</td>
+                    <td>2</td>
+                    <td>Caracteres (en Unicode)</td>
+                </tr>
+            </table>
+            <h2> Expresiones, sentencias y bloques en Java</h2>
+
+            <p>Un programa en Java se compone de un conjunto de sentencias que se ejecutan para resolver un problema.
+                Las sentencias son el elemento básico de ejecución de los programa Java.<br>
+
+                A parte de las sentencias, en un programa Java nos encontraremos con expresiones y bloques.</p>
+
+            <h2>Expresiones</h2>
+            <p>Una expresión es un conjunto de variables, operadores e invocaciones de métodos que se construyen para
+                poder ser evaluadas retornando un resultado.<br>
+
+                Ejemplos de expresiones son:</p>
+
+            <pre>
+int valor = 1;
+if (valor 1 > valor2) { ... }</pre>
+            <p>Cuando tengamos expresiones de evaluación complejas es recomendable que utilicemos paréntesis para saber
+                cual es el orden de ejecución de operaciones.
+
+                Ya que si tenemos una expresión como</p>
+
+            <pre>
+2 + 10 / 5</pre>
+            <p>No será la misma si ponemos</p>
+
+            <pre>(2 + 10) / 5</pre>
+            <p>ó</p>
+
+            <pre>2 + (10 / 5)</pre>
+            <p>En el caso de no utilizar paréntesis se ejecutará el orden de preferencia de operadores. En este caso la
+                división tiene más preferencia que la suma.</p>
+
+            <h2>Sentencias</h2>
+            <p>Una sentencia es la unidad mínima de ejecución de un programa. Un programa se compone de conjunto de
+                sentencias que acaban resolviendo un problema. Al final de cada una de las sentencias encontraremos un
+                punto y coma (;).
+
+                <br>Tenemos los siguientes tipos de sentencias.
+            </p>
+
+            <h2>Sentencias de declaración</h2>
+            <pre>int valor = 2;</pre>
+            <h2>Sentencias de asignación</h2>
+            <pre>valor = 2;</pre>
+            Sentencias de incremento o decremento
+            <pre>valor++;</pre>
+
+            <h2>Invocaciones a métodos</h2>
+            <pre>System.<strong style="color:green;">out</strong>.println("Hola Mundo");</pre>
+            <h2>Creaciones de objetos</h2>
+           <pre> Circulo miCirculo = new Circulo(2,3);</pre>
+            <h2>Sentencias de control de flujo</h2>
+            <pre>if (valor>1) { … }</pre>
+            <h2>Bloques</h2>
+            <p>Un bloque es un conjunto de sentencias los cuales están delimitados por llaves.
+            </p>
+            <pre>if (expresion) {
+    // Bloque 1
+} else {
+    // Bloque 2
+}</pre>
+        </div>
+        <div class="articulo">
+            <h1 id="enlace2">Clase String: Representando una cadena</h1>
+
+            <p>Una cadena de texto no deja de ser más que la sucesión de un conjunto de caracteres alfanuméricos, signos
+                de puntuación y espacios en blanco con más o menos sentido.<br>
+
+                Podemos encontrarnos desde la archiconocida cadena “Hola Mundo” y la no menos “Mi primera cadena de
+                texto”, pasando por las cadenas de texto personalizadas “Víctor”, “Víctor Cuervo”, las cadenas de
+                depuración “¿Aquí?”, “Paso 1”, “Paso 2”,… hasta las inclasificables “asdf”.<br>
+
+                Todas ellas serán representadas en java con la clase String y StringBuffer. Aunque de momento nos
+                centraremos en la primera.<br>
+
+                Para encontrar la clase String dentro de las librerías de Java tendremos que ir a java.lang.String.<br>
+
+            <h2>Creando una cadena</h2>
+            Para crear una cadena tenemos dos opciones:<br>
+
+            Instanciamos la clase String. Que sería una creación explicita de la clase<br></p>
+            <pre> String sMiCadena = new String("Cadena de Texto");</pre>
+            Crear implícitamente la cadena de texto. Es decir, simplemente le asignamos el valor al objeto.<br>
+            <pre>String sMiCadena = "Cadena de Texto";</pre>
+            En este caso, Java, creará un objeto String para tratar esta cadena.
+
+            <h2>Crear una cadena vacía</h2>
+            Podemos tener la necesidad de crear una cadena vacía. Puede darse el caso que no siempre sepamos lo que
+            vamos a poner de antemano en la cadena de texto. ¿A quién no le surgen dudas? ;-) … Fuera de bromas, muchas
+            veces la cadena de texto nos la proporcionará el usuario, otro sistema,….<br>
+
+            Para poder crear la cadena vacía nos bastará con asignarle el valor de “”, o bien, utilizar el constructor
+            vacío.<br>
+
+            <pre>String sMiCadena = "";<br>String sMiCadena = new String();</pre>
+            <h2>Constructores String</h2>
+            <p> Visto lo visto podemos resumir que tenemos dos tipos de constructores principales de la clase String:
+
+                <li> String(), que construirá un objeto String sin inicializar.</li>
+                <li> String(String original), construye una clase String con otra clase String que recibirá como
+                    argumento.</li>
+            </p>
+
+
+            <h2>Volcando una cadena de texto a la consola</h2>
+            <p>Solo nos quedará saber cómo volcar una cadena por pantalla. Esto lo haremos con la clase System.<strong
+                    style="color:green;">out</strong>.println que recibirá como parámetro el objeto String.
+
+                Por ejemplo:</p>
+
+            <pre>System.<strong style="color:green;">out</strong>.println("Mi Cadena de Texto");</pre>
+
+
+            <pre>String sMiCadena = new String("Mi Cadena de Texto");<br>System.<strong style="color:green;">out</strong>.println(sMiCadena);</pre>
+        </div>
+        <div class="articulo">
+            <h1 id="enlace3">Tipos Sentencias Java</h1>
+            <p>Un programa en Java se ejecuta en orden desde la primera sentencia hasta la última.<br>
+
+                Si bien existen las sentencias de control de flujo las cuales permiten alterar el fujo de
+                ejecución para tomar decisiones o repetir sentencias.<br>
+
+                Dentro de las sentencias de control de flujo tenemos las siguientes:<br>
+
+                <li> Sentencias de decisión</li><br>
+                <li>Sentencias de bucle</li> <br>
+                <li> Sentencias de ramificación</li><br>
+            </p>
+
+
+
+            <h2>Sentencias de Decisión</h2>
+
+
+
+            <p>Son sentencias que nos permiten tomar una decisión para poder ejecutar un bloque de sentencias u
+                otro.<br>
+
+                Las sentencias de decisión son: if-then-else y switch.<br>
+
+                Mediante if-then-else podremos evaluar una decisión y elegir por un bloque u otro.<br><br>
+
+            <pre> if (expresion) {
+        // Bloque then
+      } else {
+        // Bloque else
+      }</pre><br><br>
+            <p>Mientras que con switch podremos evaluar múltiples decisiones y ejecutar un bloque asociado a
+                cada una de ellas.</p>
+
+            <pre> switch (expresion) {
+            case valor1:
+              bloque1;
+              break;
+            case valor2:
+              bloque2;
+              break;
+            case valor3:
+              bloque3;
+              break;
+            …
+            default:
+                bloque_por_defecto;
+          }</pre>
+
+            El tipo de dato se asignará a la hora de definir la variable. Además, en el caso de que las
+            variables
+            sean propiedades de objetos tendrán una privacidad.</p>
+            <p>Las variables son utilizadas como propiedades dentro de los objetos.</p>
+            <pre>class Triangulo {
+            private long base;
+            private long altura;
+        }</pre>
+            <h1>Sentencias de Bucle</h1>
+            <p> Las sentencias de bucle nos van a permitir ejecutar un bloque de sentencias tantas veces como
+                queramos, o tantas veces como se cumpla una condición.<br>
+
+                En el momento que se cumpla esta condición será cuando salgamos del bucle.<br>
+
+                Las sentencias de bucle en Java son: while, do-while y for.<br>
+
+                En el caso de la sentencia while tenemos un bucle que se ejecuta mientas se cumple la condición,
+                pero puede que no se llegue a ejecutar nunca, si no se cumple la condición la primera vez.<br></p>
+
+            <pre>while (expresion) {
+          bloque_sentencias;
+        }</pre>
+            <p> Por otro lado, si utilizamos do-while, lo que vamos a conseguir es que el bloque de sentencias se
+                ejecute, al menos, una vez.</p>
+            <pre>
+        do {
+          bloque_sentencias;
+        } while (expresion)</pre>
+            <p> La sentencia for nos permite escribir toda la estructura del bucle de una forma más acotada. Si
+                bien, su cometido es el mismo.</p>
+            <pre>
+        for (sentencias_inicio;expresion;incremento) {
+          bloque_sentencias;
+        }</pre>
+            <h2>Sentencias de ramificación</h2>
+            <p>Las sentencias de ramificación son aquellas que nos permiten romper con la ejecución lineal de un
+                programa.<br>
+
+                El programa se va ejecutando de forma lineal, sentencia a sentencia. Si queremos romper esta linealidad
+                tenemos las sentencias de ramificación.<br>
+
+                Las sentencias de ramificación en Java son: break y continue.<br>
+
+                En el caso de break nos sirve para salir de bloque de sentencias, mientras que continue sirve para ir
+                directamente al siguiente bloque.</p>
+
+
+        </div>
+        <div class="articulo">
+            <h1 id="enlace4">Métodos</h1>
+            <p>En Java, los métodos son bloques de código que realizan una tarea específica. Pueden aceptar datos
+                (parámetros), ejecutar instrucciones y devolver resultados. Los métodos se definen con la siguiente
+                estructura:
+            </p>
+
+            <pre>
+            tipoDeRetorno nombreDelMetodo(parametros) {
+                // Código del método
+                // Puede contener instrucciones y lógica
+                // Puede tener una declaración 'return' para devolver un valor
+            }</pre>
+            <li>tipoDeRetorno: Es el tipo de dato que el método devuelve, como int, String, void (si no devuelve nada).
+            </li>
+            <li>nombreDelMetodo: Es el nombre que identifica al método.</li>
+            <li>parametros: Son los datos que el método puede recibir para trabajar.</li>
+
+            <p>Por ejemplo, un método simple que suma dos números y devuelve el resultado:</p>
+
+            <pre>
+
+            int sumar(int a, int b) {
+                return a + b;
+            }
+           
+            </pre>
+
+            <p>En este caso, el método se llama sumar, recibe dos números (a y b) como parámetros y devuelve la suma de
+                ambos como un número entero (int).</p>
+
+            <p>Ahora, sobre void y return:</p>
+
+            <p>void: Se usa como tipo de retorno para indicar que el método no devuelve ningún valor. Por ejemplo:</p>
+
+            <pre>
+
+            void saludar() {
+                System.<strong style="color:green;">out</strong>.println("¡Hola!");
+            }
+            
+            </pre>
+
+            <p>Este método saludar simplemente muestra un saludo en la consola, pero no devuelve ningún valor.</p>
+
+            <p>return: Se utiliza para devolver un valor desde un método. Puede devolver el resultado de una operación o
+                un valor específico del tipo declarado en el método. Por ejemplo:</p>
+
+            <pre>
+
+            int obtenerDiez() {
+                return 10;
+            }
+           
+            </pre>
+
+            <p>Este método obtenerDiez devuelve el número 10 de tipo int.</p>
+
+
+        </div>
+        <div class="articulo">
+            <h1 id="enlace5">Constructores, Getters y Setters</h1>
+
+            <p>En Java, los constructores son métodos especiales que se utilizan para inicializar objetos. Los getters y
+                setters son métodos para acceder y modificar los atributos de un objeto, respectivamente.</p>
+
+            <p>Un constructor se define así:</p>
+
+            <pre>
+            <code>
+            public class Persona {
+                private String nombre;
+          
+                // Constructor
+                public Persona(String nombre) {
+                    this.nombre = nombre;
+                }
+          
+                // Getter
+                public String getNombre() {
+                    return nombre;
+                }
+          
+                // Setter
+                public void setNombre(String nuevoNombre) {
+                    this.nombre = nuevoNombre;
+                }
+            }
+            </code>
+            </pre>
+
+            <p>En este caso, la clase Persona tiene un constructor que recibe un nombre para inicializar el objeto, un
+                getter para obtener el nombre y un setter para actualizarlo.</p>
+
+            <p>Uso del constructor, getter y setter:</p>
+
+            <pre>
+            <code>
+            public class Main {
+                public static void main(String[] args) {
+                    // Uso del constructor para crear un objeto Persona
+                    Persona persona = new Persona("Juan");
+          
+                    // Uso del getter para obtener el nombre
+                    String nombre = persona.getNombre();
+                    System.<strong style="color:green;">out</strong>.println("Nombre: " + nombre);
+          
+                    // Uso del setter para cambiar el nombre
+                    persona.setNombre("María");
+          
+                    // Obtener el nuevo nombre usando el getter
+                    String nuevoNombre = persona.getNombre();
+                    System.<strong style="color:green;">out</strong>.println("Nuevo nombre: " + nuevoNombre);
+                }
+            }
+            </code>
+            </pre>
+        </div>
+
+    </div>
+    <footer class="footer">
+        <div class="footer-contenido">
+          <div class="footer-info">
+            <h3>Contacto</h3>
+            <p>Dirección: Calle Falsa 123, Ciudad Ficticia</p>
+            <p>Teléfono: +123456789</p>
+            <p>Email: info@example.com</p>
+          </div>
+          <div class="footer-links">
+            <h3>Enlaces</h3>
+            <ul>
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Acerca de</a></li>
+              <li><a href="#">Servicios</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-abajo">
+          &copy; 2023 Nombre de tu Sitio
+        </div>
+      </footer>
+      
+</body>
+
+</html>
